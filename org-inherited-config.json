@@ -9,7 +9,6 @@
     "config:best-practices",
     "customManagers:dockerfileVersions",
     "customManagers:githubActionsVersions",
-    "schedule:officeHours",
     ":automergeRequireAllStatusChecks",
     ":disableRateLimiting",
     ":enableVulnerabilityAlerts",
@@ -56,6 +55,7 @@
     }
   ],
   "requireConfig": "required",
+  "schedule": ["* 8-17 * * MON-FRI"],
   "vulnerabilityAlerts": {
     "addLabels": ["security"]
   }
