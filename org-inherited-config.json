@@ -3,11 +3,13 @@
   "additionalBranchPrefix": "{{manager}}/",
   "automerge": false,
   "commitBodyTable": true,
+  "commitMessageAction": "Bump",
   "dependencyDashboard": false,
   "extends": [
     "config:best-practices",
     "customManagers:dockerfileVersions",
     "customManagers:githubActionsVersions",
+    "schedule:officeHours",
     ":automergeRequireAllStatusChecks",
     ":disableRateLimiting",
     ":enableVulnerabilityAlerts",
@@ -54,7 +56,6 @@
     }
   ],
   "requireConfig": "required",
-  "schedule": ["* 5-21 * * MON-FRI"],
   "vulnerabilityAlerts": {
     "addLabels": ["security"]
   }
