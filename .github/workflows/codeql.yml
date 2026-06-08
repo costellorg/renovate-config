@@ -16,7 +16,12 @@ permissions: {}
 
 jobs:
   analysis:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.sha }}
+      cancel-in-progress: false
 
     permissions:
       actions: read
@@ -50,7 +55,12 @@ jobs:
   codeql:
     if: ${{ !cancelled() }}
     needs: [ analysis ]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.sha }}
+      cancel-in-progress: false
 
     steps:
     - name: Report status
