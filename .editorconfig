@@ -15,7 +15,7 @@ spelling_languages = en-us
 # Code files
 
 [*.cs]
-file_header_template = Copyright (c) Costellorg, 2025. All rights reserved.\nLicensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
+file_header_template = Copyright (c) Martin Costello, 2025. All rights reserved.\nLicensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 
 [*.{cs,csx,vb,vbx}]
 indent_size = 4
